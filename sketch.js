@@ -32,10 +32,9 @@ function draw() {
   }
 
   function drawCloud(x, y, w, h) {
-    fill(255, 255, 255, 200); // White, semi-transparent
+    fill(255, 255, 255, 200); 
     noStroke();
   
-    // Create the fluffy cloud effect using ellipses
     ellipse(x - w * 0.3, y, w * 0.6, h);
     ellipse(x + w * 0.3, y, w * 0.6, h);
     ellipse(x - w * 0.15, y - h * 0.5, w * 0.5, h * 0.7);
