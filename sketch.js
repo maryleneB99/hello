@@ -3,14 +3,14 @@ function setup() {
 }
 
   
-  function draw() {
-    background(220);
-  
-    drawStar(200,75);
-    drawStar(150,300);
-    drawHeart();
-  
-  }
+function draw() {
+  background(220);
+
+  drawStar(200, 75);    
+  drawStar(150, 300);    
+  drawHeart();           
+  drawCloud(300, 200, 100, 50); 
+}
 
   function drawHeart() {
     noStroke();
@@ -31,6 +31,16 @@ function setup() {
     pop();
   }
 
+  function drawCloud(x, y, w, h) {
+    fill(255, 255, 255, 200); // White, semi-transparent
+    noStroke();
+  
+    // Create the fluffy cloud effect using ellipses
+    ellipse(x - w * 0.3, y, w * 0.6, h);
+    ellipse(x + w * 0.3, y, w * 0.6, h);
+    ellipse(x - w * 0.15, y - h * 0.5, w * 0.5, h * 0.7);
+    ellipse(x + w * 0.15, y - h * 0.5, w * 0.5, h * 0.7);
+    ellipse(x, y - h * 0.2, w * 0.8, h);
+  }
 
 
-//draw a star
